@@ -1,20 +1,21 @@
 #include <stdio.h>
 
-int main(){
+int main() {
     char ASCII;
     printf("Please enter a character: ");
-    scanf("%c", &ASCII);  // Read character input
+    scanf("%c", &ASCII);  // Read the character input
+    getchar(); // Clear the newline left in the buffer after pressing Enter
     printf("%i\n", ASCII); // Print the ASCII value of the character
 
     int integer;
-    // Use a space before %i to consume any leftover newline or whitespace
     printf("Please enter an integer between 0 - 127: ");
-    scanf(" %i", &integer);  // Space before %i to skip any leftover newline
+    scanf("%i", &integer);  // Read the integer input
+    getchar();  // Clear the newline after integer input
     printf("%c\n", integer);  // Print the character corresponding to the ASCII value
 
     // Math with ASCII
-    char mathz = 'A' + '\t';  // 'A' (65) + '\t' (11)
-    printf("A(65) + \\t(11) = %c(%d)\n", mathz, mathz );  // Print result
+    int mathz = 'A' + '\t';  // 'A' (65) + '\t' (11), store the sum as an integer
+    printf("A(65) + \\t(11) = %i\n", mathz );  // Print the result as the numeric sum
 
     return 0;
 }
