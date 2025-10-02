@@ -5,7 +5,7 @@
 int main(){
 	bool calebIsFat = true;
 
-	printf("Is caleb fat %b", calebIsFat);
+	printf("Is caleb fat: %b\n ", calebIsFat);
 
 	return 0;
 
