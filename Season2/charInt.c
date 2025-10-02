@@ -14,7 +14,7 @@ int main() {
     printf("%c\n", integer);  // Print the character corresponding to the ASCII value
 
     // Math with ASCII
-    int mathz = 'A' + '\t';  // 'A' (65) + '\t' (11), store the sum as an integer
+    int mathz = 'A' + '\t';  // 'A' (65) + '\t' (9), store the sum as an integer
     printf("A(65) + \\t(11) = %i\n", mathz );  // Print the result as the numeric sum
 
     return 0;
