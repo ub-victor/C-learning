@@ -3,26 +3,25 @@
 
 int main()
 {
-	double a;
-	double b;
+    double a, b, c; // ✅ Declare all variables together
 
-	printf("This app will calculate the hypotenuse of a right triangle. \n");
+    printf("This program calculates the hypotenuse of a right triangle.\n");
 
-	// Get the firt number
-	printf("Now enter the first value: ");
-	//lf = double format character
-	scanf("%lf", &a);
-	// Get the second number
-	printf("Now enter the second value: ");
-	scanf("%lf", &b);
+    // Get the first side
+    printf("Enter the first side (a): ");
+    scanf("%lf", &a);
 
-	// Calculate the hypotenuse
-	 c = sqrt((a*a)+(b*b));
+    // Get the second side
+    printf("Enter the second side (b): ");
+    scanf("%lf", &b);
 
-	//output the hypotenuse
-	printf("The hypontenuse is %f\n", c);
+    // Calculate the hypotenuse
+    c = sqrt((a * a) + (b * b));
 
+    // Display the result
+    printf("The hypotenuse is: %.2f\n", c);
 
-	return 0;
+    return 0;
 
 }
+
