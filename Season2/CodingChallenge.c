@@ -17,7 +17,7 @@ int main()
 
     // Calculate the hypotenuse
     c = sqrt((a * a) + (b * b));
- 
+
     // Display the result
     printf("The hypotenuse is: %.2f\n", c);
 
