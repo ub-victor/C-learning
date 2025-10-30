@@ -4,7 +4,11 @@
 int main()
 {
 
-	bool pizzaIsHealthy = true;
+	bool pizzaIsHealthy;
+	int temp;
+	printf("Do you believe in the power of the pizza? 1 is true and 0 is false: ");
+	scanf("%d", &temp);
+	pizzaIsHealthy = temp;
 	if(pizzaIsHealthy){// if(true){}
 
 		printf("Welcome to my pizza App\n");
