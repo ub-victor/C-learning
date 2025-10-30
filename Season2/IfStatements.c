@@ -15,7 +15,7 @@ int main()
 		printf("Welcome to my pizza App\n");
 
 	}else{
-		printf("Oh! You do not believe in Pizza's power!")
+		printf("Oh! You do not believe in Pizza's power!\n");
 	}
 	
 
