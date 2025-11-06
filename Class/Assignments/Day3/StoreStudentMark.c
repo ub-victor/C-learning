@@ -1,41 +1,44 @@
 #include <stdio.h>
 
 int main() {
-    int marks[2][3][3]; // [terms][students][subjects]
-    int term, student, subject;
+    int terms = 2;
+    int students = 3;
+    int subjects = 3;
+
+    float marks[2][3][3]; // [term][student][subject]
+    float termAverage, overallAverage;
 
     // Input marks
-    for (term = 0; term < 2; term++) {
-        printf("\n--- Enter marks for Term %d ---\n", term + 1);
-        for (student = 0; student < 3; student++) {
-            printf("Student %d:\n", student + 1);
-            for (subject = 0; subject < 3; subject++) {
-                printf("  Subject %d: ", subject + 1);
-                scanf("%d", &marks[term][student][subject]);
+    for (int t = 0; t < terms; t++) {
+        printf("\n--- Enter marks for Term %d ---\n", t + 1);
+        for (int s = 0; s < students; s++) {
+            printf("Student %d:\n", s + 1);
+            for (int sub = 0; sub < subjects; sub++) {
+                printf("  Subject %d: ", sub + 1);
+                scanf("%f", &marks[t][s][sub]);
             }
         }
     }
 
-    printf("\n===== AVERAGE MARKS =====\n");
+    printf("\n=========== STUDENT AVERAGES ===========\n");
 
-    // Calculate and display averages
-    for (student = 0; student < 3; student++) {
-        float termTotal[2] = {0, 0};
-        float overallTotal = 0;
+    // Calculate averages
+    for (int s = 0; s < students; s++) {
+        overallAverage = 0.0;
 
-        // For each term
-        for (term = 0; term < 2; term++) {
-            for (subject = 0; subject < 3; subject++) {
-                termTotal[term] += marks[term][student][subject];
+        for (int t = 0; t < terms; t++) {
+            float termSum = 0.0;
+            for (int sub = 0; sub < subjects; sub++) {
+                termSum += marks[t][s][sub];
             }
-            float termAverage = termTotal[term] / 3.0;
-            overallTotal += termAverage;
-            printf("Student %d - Term %d Average: %.2f\n", student + 1, term + 1, termAverage);
+            termAverage = termSum / subjects;
+            overallAverage += termAverage;
+
+            printf("Student %d - Term %d Average: %.2f\n", s + 1, t + 1, termAverage);
         }
 
-        // Overall average across both terms
-        float overallAverage = overallTotal / 2.0;
-        printf("Student %d - Overall Average: %.2f\n\n", student + 1, overallAverage);
+        overallAverage /= terms;
+        printf("Student %d - Overall Average (2 terms): %.2f\n\n", s + 1, overallAverage);
     }
 
     return 0;
