@@ -4,9 +4,17 @@
 
 
 int main(){
+	int maxValue = 5;
 	srand(time(NULL));
-	int randomNumber = rand();
+	int randomNumber = rand() % maxValue +1;
 
-	printf("The randomNumber is: %d\n", randomNumber); 
+	printf("Guess a number 0 - 5: "); 
+	int input;
+	scanf("%d", &input);
 
+	if(input == randomNumber){
+		printf("You win\n");
+	}else{
+		printf("You don't win! Try again!\n");
+	}
 }
