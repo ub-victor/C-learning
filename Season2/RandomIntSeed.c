@@ -1,9 +1,12 @@
 #include <stdio.h>
-#include <stdlib>
+#include <stdlib.h>
 #include <time.h>
 
 
-int main(void){
-	srand((unsigned) time(NULL)); // seed RNG Using Current time 
+int main(){
+	srand(time(NULL));
+	int randomNumber = rand();
+
+	printf("The randomNumber is: %d\n", randomNumber); 
 
 }
