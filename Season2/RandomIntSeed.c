@@ -18,3 +18,5 @@ int main(){
 		printf("You don't win! Try again!\n");
 	}
 }
+
+//5H10: 37
