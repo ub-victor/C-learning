@@ -17,8 +17,19 @@ int main(){
 	int input;
 	scanf("%d", &input);
 
-	if(){
-	
-	
+	if(input == 1){
+		printf("Add a patient\n");
+	}else if(input == 2){
+		printf("View a patient\n");	
+	}else if(input == 3)
+		{
+		printf("Search patients\n");
+	}else if(input == 4) {
+		printf("Exiting...\n");
+	}else{
+		printf("Incorrect input\n");
 	}
+
+	return (0);
+
 }
