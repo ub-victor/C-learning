@@ -17,7 +17,16 @@ void dyn_append(DynArray* da, int value){
 		// Double the capacity (if capcity was 0, set to 1)
 		int new_capacity = (da->capacity ==0)? 1 : capacity *2;
 
+		// Reallocate memory for the new capacity
+		int* new_data = (*int)realloc(da->data, new_capacity * sizeof(int));
+
+		// Update the capacity in the structure
+		da-> capacity = new_capacity;
 		
 	}
+	// Now there is space; insert thevalue at the end
+	da->data[da->size]= value;
+
+	da->size++;
 
 }
